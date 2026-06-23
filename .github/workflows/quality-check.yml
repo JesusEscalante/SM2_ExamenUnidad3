@@ -34,7 +34,7 @@ jobs:
 
         with:
 
-          flutter-version: '3.44'  # ajusta a tu versión de Flutter
+          flutter-version: '3.22'  # ajusta a tu versión de Flutter
 
  
 
@@ -46,7 +46,7 @@ jobs:
 
       - name: Analyze
 
-        run: flutter analyze --no-fatal-warnings
+        run: flutter analyze
 
  
 
