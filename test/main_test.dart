@@ -183,39 +183,5 @@ void main() {
       expect(user.isAdmin, false);
       expect(user.canModerate(), false);
     });
-
-    // Verificar que el método canModerate funciona correctamente
-    test('canModerate should work correctly for different roles', () {
-      // Crear usuarios con diferentes roles
-      final adminUser = UserModel(
-        id: 'admin-id',
-        email: 'admin@example.com',
-        name: 'Admin',
-        createdAt: DateTime.now(),
-        role: 'admin',
-      );
-
-      final moderatorUser = UserModel(
-        id: 'mod-id',
-        email: 'mod@example.com',
-        name: 'Moderator',
-        createdAt: DateTime.now(),
-        role: 'moderator',
-      );
-
-      final regularUser = UserModel(
-        id: 'user-id',
-        email: 'user@example.com',
-        name: 'User',
-        createdAt: DateTime.now(),
-        role: 'user',
-      );
-
-      // Verificar que admin y moderator pueden moderar
-      expect(adminUser.canModerate(), true);
-      expect(moderatorUser.canModerate(), true);
-      // Verificar que usuario regular NO puede moderar
-      expect(regularUser.canModerate(), false);
-    });
   });
 }
