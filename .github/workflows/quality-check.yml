@@ -34,7 +34,8 @@ jobs:
 
         with:
 
-          flutter-version: '3.22'  # ajusta a tu versión de Flutter
+          flutter-version: '3.24.0'  # ajusta a tu versión de Flutter
+          channel: 'stable'
 
  
 
